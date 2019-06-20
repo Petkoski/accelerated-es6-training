@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello!</h1>
+
+    <script data-require="traceur@*" data-semver="0.0.0-20140302" src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
+    <!-- <script data-require="traceur@*" data-semver="0.0.0-20140302" src="https://traceur-compiler.googlecode.com/git/src/bootstrap.js"></script> -->
+    <script data-require="systemjs@*" data-semver="0.21.4" src="//cdnjs.cloudflare.com/ajax/libs/systemjs/0.21.4/system.js"></script>
+    <!-- <script src="script.js"></script> -->
+
+    <script>
+        //Adding plugin-babel as transpiler
+        System.config({
+            map: {
+                'plugin-babel': './node_modules/systemjs-plugin-babel/plugin-babel.js',
+                'systemjs-babel-build': './node_modules/systemjs-plugin-babel/systemjs-babel-browser.js'
+            },
+            transpiler: 'plugin-babel',
+        });
+
+        System.import('./script.js'); //systemjs syntax
+        //^Start importing everything (load the file and look which modules this file requires to also load those).
+        //Browsers in future will do this natively.
+    </script>
+</body>
+</html>

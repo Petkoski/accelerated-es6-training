@@ -1,0 +1,12 @@
+Chapter 01: Introduction
+Chapter 02: Syntax Changes & Additions
+Chapter 03: Modules & Classes
+Chapter 04: Symbols
+Chapter 05: Iterators & Generators
+Chapter 06: Promises
+Chapter 07: Extensions of Built-in Objects
+Chapter 08: Maps & Sets
+Chapter 09: The Reflect API
+Chapter 10: The Proxy API
+Chapter 11: Course Project
+Chapter 12: Course Wrap Up
